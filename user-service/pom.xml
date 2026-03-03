@@ -52,6 +52,11 @@
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <!-- Allows this service to fetch its config from the Config Server on startup -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
         <!-- Hot reload: restarts app automatically when you change a file -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
