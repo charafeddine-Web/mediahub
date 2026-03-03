@@ -1,0 +1,15 @@
+package com.ilyassan.mediahub.media.dto;
+
+import com.ilyassan.mediahub.media.enums.MediaType;
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class MediaDto {
+    private Long id;
+    private String title;
+    private MediaType type;
+    private String genre;
+    private String category;
+}
