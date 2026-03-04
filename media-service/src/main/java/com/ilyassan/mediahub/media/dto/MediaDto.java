@@ -9,6 +9,7 @@ import lombok.Data;
 public class MediaDto {
     private Long id;
     private String title;
+    private String description;
     private MediaType type;
     private String genre;
     private String category;
