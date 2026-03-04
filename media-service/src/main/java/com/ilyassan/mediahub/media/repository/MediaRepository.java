@@ -1,15 +1,9 @@
 package com.ilyassan.mediahub.media.repository;
 
 import com.ilyassan.mediahub.media.entity.Media;
+import org.jspecify.annotations.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-import java.util.List;
-
-public interface MediaRepository extends JpaRepository<Media, Long> {
-
-    // Spring Data generates: SELECT * FROM media WHERE category = ?
-    List<Media> findByCategory(String category);
-
-    // Spring Data generates: SELECT * FROM media WHERE genre = ?
-    List<Media> findByGenre(String genre);
+public interface MediaRepository extends JpaRepository<@NonNull Media, @NonNull Long>, JpaSpecificationExecutor<@NonNull Media> {
 }

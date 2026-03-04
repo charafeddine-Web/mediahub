@@ -2,11 +2,10 @@ package com.ilyassan.mediahub.media.entity;
 
 import com.ilyassan.mediahub.media.enums.MediaType;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 @Entity
-@Table(name = "media")
+@Table(name = "medias")
 @Data
 @Builder
 @NoArgsConstructor
@@ -17,12 +16,15 @@ public class Media {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+    @Column(nullable = false)
     private String title;
 
-    @Enumerated(EnumType.STRING)
-    private MediaType type;   // FILM, SERIES, or PODCAST
+    @Column(length = 1000)
+    private String description;
 
-    private String genre;     // e.g. "Action", "Drama"
-    private String category;  // e.g. "Trending", "New"
+    @Enumerated(EnumType.STRING)
+    private MediaType type;
+
+    private String genre;
+    private String category;
 }
