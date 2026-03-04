@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class MediaDto {
+public class MediaDTO {
     private Long id;
     private String title;
     private String description;
