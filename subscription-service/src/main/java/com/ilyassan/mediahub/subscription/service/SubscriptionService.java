@@ -39,7 +39,7 @@ public class SubscriptionService {
     }
 
     public MediaDto getMediaDetails(Long mediaId) {
-        return mediaClient.getMediaById(mediaId);
+        return mediaClient.getMediaById(mediaId).getData();
     }
 
     private SubscriptionDto toDto(Subscription s) {
